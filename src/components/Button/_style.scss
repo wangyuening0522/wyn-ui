@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+.btn {
+  position: relative;
+  display: inline-block;
+  color: $body-color;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  vertical-align: center;
+  border: $btn-border-width solid transparent;
+  @include button-size(
+    $btn-padding-x,
+    $btn-padding-y,
+    $btn-font-size,
+    $border-radius
+  );
+}
+.btn-lg {
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-border-radius-lg
+  );
+}
+.btn-sm {
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-border-radius-sm
+  );
+}
+.btn-primary {
+  @include button-style($primary, $primary, $white);
+}
+.btn-danger {
+  @include button-style($danger, $danger, $white);
+}
+.btn-default {
+  @include button-style(
+    $white,
+    $gray-400,
+    $body-color,
+    $white,
+    $primary,
+    $primary
+  );
+}
+/* .btn-link {
+  @include button-style()
+} */
